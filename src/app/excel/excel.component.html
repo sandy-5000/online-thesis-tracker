@@ -1,0 +1,21 @@
+<div class="container">
+    <h2 class="text-center mt-4 mb-4">New Students</h2>
+    <div class="card">
+        <div class="card-header"><b>Select Excel File</b></div>
+        <div class="card-body">
+            <input type="file" id="file1" (change)="onFileChange($event, 0)" />
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm col-2 m-2" (click)="upload()">Upload Students</button>
+</div>
+<div class="container">
+    <h2 class="text-center mt-4 mb-4">Update status</h2>
+    <div class="card">
+        <div class="card-header"><b>Select Excel File</b></div>
+        <div class="card-body">
+            <input type="file" id="file2" (change)="onFileChange($event, 1)" />
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary btn-sm col-2 m-2" (click)="update()">Update Status</button>
+</div>
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>

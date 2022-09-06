@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="loginBox">
+    <form #loginForm="ngForm" class="was-validated loginForm" (ngSubmit)="isUserExisted(loginForm.value)">
+        <h3>Login Here</h3>
+        <div class="inputBox">
+            <input type="text" ngModel class="input-group-text" id="roll" name="roll" placeholder="Registration Number" required>
+        </div>
+        <div class="inputBox">
+            <input type="Password" ngModel class="input-group-text" id="pass" name="pass" placeholder="password" required>
+        </div>
+        <p class="link" (click)="forgotPassword()">forgot password?</p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">{{buttonValue}}</button>
+        </div>
+    </form>
+</div>

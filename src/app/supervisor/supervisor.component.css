@@ -1,0 +1,60 @@
+@media screen and (max-width: 600px) {
+    body {
+        background-size: cover;
+    }
+}
+
+.loginBox,
+.otpbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 450px;
+    min-height: 200px;
+    border-radius: 10px;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+}
+
+.loginBox input,
+.otpbox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+form label {
+    margin: 20px;
+    color: #262626;
+    font-size: 20px;
+}
+
+form {
+    border: 1px solid #262626;
+    padding: 20px 50px;
+    border-radius: 20px;
+}
+
+button {
+    color: whitesmoke;
+    background-color: darkblue;
+}
+
+button:hover {
+    background-color: rgb(0, 0, 173);
+}
+
+.tick {
+    color: rgb(25, 186, 84);
+}

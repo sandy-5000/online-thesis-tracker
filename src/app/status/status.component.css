@@ -1,0 +1,160 @@
+ol.progres[data-steps="1"] li {
+    width: 98%;
+}
+
+ol.progres[data-steps="2"] li {
+    width: 49%;
+}
+
+ol.progres[data-steps="3"] li {
+    width: 33%;
+}
+
+ol.progres[data-steps="4"] li {
+    width: 24%;
+}
+
+ol.progres[data-steps="5"] li {
+    width: 19%;
+}
+
+ol.progres[data-steps="6"] li {
+    width: 16%;
+}
+
+ol.progres[data-steps="7"] li {
+    width: 14%;
+}
+
+ol.progres[data-steps="8"] li {
+    width: 12%;
+}
+
+ol.progres[data-steps="9"] li {
+    width: 11%;
+}
+
+.progres {
+    width: 100%;
+    list-style: none;
+    list-style-image: none;
+    margin: 20px 0 20px 0;
+    padding: 0;
+    height: 120px;
+}
+
+.progres li {
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.progres .name {
+    display: block;
+    text-align: center;
+    margin: 1.3em 0 .5em 0;
+    color: rgba(24, 7, 63, 0.966);
+}
+
+.progres .step {
+    color: black;
+    border: 3px solid silver;
+    background-color: silver;
+    border-radius: 50%;
+    line-height: 1.2;
+    width: 1.7em;
+    height: 1.7em;
+    display: inline-block;
+    z-index: 0;
+}
+
+.progres .step span {
+    opacity: 1;
+}
+
+.progres .active .name,
+.progres .active .step span {
+    opacity: 1;
+}
+
+.progres .step:before {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    left: 0;
+    z-index: -1;
+}
+
+.progres .step:after {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0;
+    z-index: -1;
+}
+
+.progres li:first-of-type .step:before {
+    display: none;
+}
+
+.progres li:last-of-type .step:after {
+    display: none;
+}
+
+.progres .done .step,
+.progres .done .step:before,
+.progres .done .step:after,
+.progres .active .step,
+.progres .active .step:before {
+    color: rgb(255, 255, 255);
+    background-color: rgb(195, 205, 50);
+}
+
+.progres .done .step,
+.progres .active .step {
+    border: 3px solid rgb(175, 161, 34);
+}
+
+.topp {
+    color: rgba(24, 7, 63, 0.966);
+    margin-top: 1cm;
+    margin-left: 10%;
+}
+
+.progres .done-1 .step,
+.progres .done-1 .step:before,
+.progres .done-1 .step:after,
+.progres .active-1 .step,
+.progres .active-1 .step:before {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 104, 205);
+    border: 3px solid rgb(34, 72, 175);
+}
+
+.progres .done-2 .step,
+.progres .done-2 .step:before,
+.progres .done-2 .step:after,
+.progres .active-2 .step,
+.progres .active-2 .step:before {
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 201, 119);
+    border: 3px solid rgb(25, 151, 92);
+}
+
+.progres .done-3 .step,
+.progres .done-3 .step:before,
+.progres .done-3 .step:after,
+.progres .active-3 .step,
+.progres .active-3 .step:before {
+    color: rgb(255, 255, 255);
+    background-color: rgb(131, 25, 201);
+    border: 3px solid rgb(86, 16, 95);
+}

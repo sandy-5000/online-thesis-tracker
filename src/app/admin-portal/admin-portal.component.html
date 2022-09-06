@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div *ngIf="loggedIn">
+    <div style="display: flex;flex-direction: row-reverse; margin: 50px 100px 50px 0px">
+        <button type="button" class="btn btn-primary btn-sm col-2 m-2" (click)="resetSession()">Reset session</button>
+        <button type="button" class="btn btn-primary btn-sm col-2 m-2" (click)="showTable()">{{table_flag ? 'Hide' : 'Show'}} Table</button>
+        <button type="button" class="btn btn-primary btn-sm col-2 m-2" (click)="goToNewUser()">New User</button>
+    </div>
+    <!-- <app-excel></app-excel> -->
+    <app-admin-form></app-admin-form>
+</div>
+
+<table class="table" style="margin-top: 80px;" *ngIf="table_flag">
+    <thead>
+        <tr>
+            <th *ngFor="let col of cols" scope="col">{{col}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of curr_status; let id = index">
+            <td *ngFor="let j of i" scope="col">{{j + ' / ' + all_status[id][j]}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,44 @@
+<app-header></app-header>
+<form #updateForm="ngForm" (ngSubmit)="sendOTP(updateForm.value)" *ngIf="!flag_">
+    <div class="container mt-5">
+        <div class="row p-3">
+            <div class="col-lg-6 col-sm-12">
+                <select name="key" id="key" ngModel class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option selected>Select field you want to update</option>
+                    <option value="name:1">Name</option>
+                    <option value="phone:1">Phone Number</option>
+                    <option value="aadhar:2">Aadhar Number</option>
+                    <option value="Sname:1">Supervisor Name</option>
+                    <option value="Semail:1">Supervisor Email</option>
+                    <option value="Sphone:3">Supervisor Phone Number</option>
+                    <option value="Cname:1">Co-Supervisor Name</option>
+                    <option value="Cemail:1">Co-Supervisor Email</option>
+                    <option value="Cphone:3">Co-Supervisor Phone Number</option>
+                </select>
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="col-lg-6 col-sm-12">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Enter value</span>
+                    <input type="text" name="value" id="value" ngModel class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </div>
+        </div>
+        <div class="row px-5 py-3 col-12">
+            <button type="Submit" class="btn btn-primary col-lg-4 col-md-10 col-sm-12">Send OTP</button>
+        </div>
+    </div>
+</form>
+
+<form #otpForm="ngForm" (ngSubmit)="validateOTP(otpForm.value)" *ngIf="flag_">
+    <div class="container mt-5">
+        <div class="row p-3">
+            <div class="col-lg-6 col-md-8 col-sm-12">
+                <h3 class="text-center">OTP Validation</h3>
+                <input type="password" ngModel class="m-2 input-group-text col-12" id="otp" name="otp" placeholder="Enter OTP" required>
+                <button type="submit" class="m-2 btn btn-primary col-12" id="submit">Verify OTP</button>
+            </div>
+        </div>
+    </div>
+</form>

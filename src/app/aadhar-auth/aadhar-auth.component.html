@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="aadharbox" *ngIf="!sent">
+    <form #aadharForm="ngForm" class="was-validated loginForm" (ngSubmit)="validateAadhar(aadharForm.value)">
+        <h3>Aadhar Verification</h3>
+        <div class="inputBox">
+            <input type="text" ngModel class="input-group-text" id="aadhar" name="aadhar" placeholder="Enter your Aadhar number" required>
+        </div>
+        <p>OTP is sent to your registered email</p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">{{buttonValue}}</button>
+        </div>
+    </form>
+</div>
+
+<div class="otpbox" *ngIf="sent">
+    <form #otpForm="ngForm" class="was-validated loginForm" (ngSubmit)="validateOTP(otpForm.value)">
+        <h3>OTP Validation</h3>
+        <div class="inputBox">
+            <input type="password" ngModel class="input-group-text" id="otp" name="otp" placeholder="Enter OTP" required>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">Verify OTP</button>
+        </div>
+    </form>
+</div>

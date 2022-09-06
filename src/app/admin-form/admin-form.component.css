@@ -1,0 +1,13 @@
+.btn {
+    background-color: darkblue;
+    color: white;
+}
+
+.btn:hover {
+    background-color: blue;
+}
+
+.rStatus {
+    font-weight: 400;
+    font-size: 24px;
+}

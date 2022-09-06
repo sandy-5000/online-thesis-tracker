@@ -1,0 +1,113 @@
+<div class="m-5 statusForm">
+    <h1 class="mx-5 mb-5">Status form</h1>
+    <form #statusForm="ngForm" class="was-validated" (ngSubmit)="updateStatus(statusForm.value) && statusForm.resetForm({})">
+        <div class="form-check form-check-inline mx-5">
+            <input class="form-check-input" [(ngModel)]="status" type="radio" name="status" id="insert" value="1">
+            <label class="form-check-label rStatus" for="insert">new status</label>
+        </div>
+        <div class="form-check form-check-inline mx-5">
+            <input class="form-check-input" [(ngModel)]="status" type="radio" name="status" id="update" value="0">
+            <label class="form-check-label rStatus" for="update">update status</label>
+        </div>
+        <div class="form-group row mt-3 mx-4">
+            <label for="roll" class="col-sm-3 col-form-label">Roll Number* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-4" id="roll" name="roll" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3 mx-4">
+            <label for="DE_office" class="col-sm-3 col-form-label">Arrived at DE office :</label>
+            <div class="col-sm-9">
+                <input type="date" ngModel class="input-group-text col-4" id="DE_office" name="DE_office" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3 mx-5">
+            <h3>Adjudication 1:</h3>
+            <div class="mx-5">
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Synopsis Communicated :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E1_mail" name="E1_mail" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Thesis Communicated (Lifted) :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E1_lift" name="E1_lift" required>
+                    </div>
+                </div>
+                <!-- <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">In Progress :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E1_process" name="E1_process" required>
+                    </div>
+                </div> -->
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Thesis Report Arrived :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E1_arrived" name="E1_arrived" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mt-3 mx-5">
+            <h3>Adjudication 2:</h3>
+            <div class="mx-5">
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Synopsis Communicated :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E2_mail" name="E2_mail" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Thesis Communicated (Lifted) :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E2_lift" name="E2_lift" required>
+                    </div>
+                </div>
+                <!-- <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">In Progress :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E2_process" name="E2_process" required>
+                    </div>
+                </div> -->
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Thesis Report Arrived :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E2_arrived" name="E2_arrived" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mt-3 mx-5">
+            <h3>Adjudication 3:</h3>
+            <div class="mx-5">
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Synopsis Communicated :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E3_mail" name="E3_mail" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Thesis Communicated (Lifted) :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E3_lift" name="E3_lift" required>
+                    </div>
+                </div>
+                <!-- <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">In Progress :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E3_process" name="E3_process" required>
+                    </div>
+                </div> -->
+                <div class="form-group row mt-3">
+                    <label for="DE_office" class="col-sm-3 col-form-label">Thesis Report Arrived :</label>
+                    <div class="col-sm-9">
+                        <input type="date" ngModel class="input-group-text col-4" id="E3_arrived" name="E3_arrived" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn mx-5 col-sm-3" style="float: right;" type="submit">Submit Details</button>
+    </form>
+</div>

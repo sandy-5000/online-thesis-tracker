@@ -1,0 +1,51 @@
+<nav class="navbar navbar-light bg-light">
+    <div style="width: 5%">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Jntuk-logo.png/220px-Jntuk-logo.png" alt="" width="120" height="120" class="d-inline-block align-text-top" style="margin: 10px 0 10px 10px" />
+        <!-- <img src="../../../assets/AppLogo.png" alt="" width="120" height="120" class="d-inline-block align-text-top" style="margin: 10px 0 10px 10px" /> -->
+    </div>
+    <div class="header" style="width: 90%">
+        <h1 style="color: blue">Jawaharlal Nehru Technological University Kakinada</h1>
+        <h2 style="color: green">Online Ph.D Thesis Tracking System</h2>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" (mouseenter)="reload()">
+    <div class="container-fluid">
+        <h1 class="navbar-brand" style="margin-left: 3cm">{{flag ? 'Welcome ' + userId : 'NAVIGATE'}}</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" *ngIf="!flag" id="navbarNav">
+            <ul class="navBar navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 1cm;">
+                <li class="nav-item">
+                    <button class="nav-link active" (click)="goToHome()">Home</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link active" (click)="goToRegister()">Register</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link active" (click)="goToLogin()">Login</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link active" (click)="goToAdmin()">Admin</button>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" style="flex-direction: row-reverse; margin-right: 3cm" *ngIf="flag" id="navbarNav">
+            <ul class="navBar navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <button class="nav-link active" (click)="goToHome()">Home</button>
+                </li>
+                <li class="nav-item" *ngIf="!_flag">
+                    <button class="nav-link active" style="width: 180px;" (click)="goToUpdate()">Update Data</button>
+                </li>
+                <li class="nav-item" *ngIf="_flag">
+                    <button class="nav-link active" (click)="goToAdmin()">Admin</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link active" (click)="logout()">logout</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

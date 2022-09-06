@@ -1,0 +1,18 @@
+.about p {
+    margin: 5%;
+    color: rgb(42, 82, 122);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.contact {
+    margin: 5%;
+    color: rgb(42, 82, 122);
+}
+
+.add {
+    display: flex;
+    color: rgb(42, 82, 122);
+    margin-right: 5%;
+    flex-direction: row-reverse;
+}

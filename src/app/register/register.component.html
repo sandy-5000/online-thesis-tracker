@@ -1,0 +1,93 @@
+<app-header></app-header>
+<div class="registerForm">
+    <h1 class="mx-5 mb-5">Register form</h1>
+    <form #registerForm="ngForm" class="was-validated" (ngSubmit)="register(registerForm.value)">
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Roll Number* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="roll" name="roll" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Student Name* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="name" name="name" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Email* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="email" name="email" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Password* :</label>
+            <div class="col-sm-9">
+                <input type="password" ngModel class="input-group-text col-8" id="pass" name="pass" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Confirm Password* :</label>
+            <div class="col-sm-9">
+                <input type="password" ngModel class="input-group-text col-8" id="cpass" name="cpass" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Phone Number* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="phone" name="phone" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Aadhar Number* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="aadhar" name="aadhar" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Supervisor Name* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="Sname" name="Sname" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Supervisor Email* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="Semail" name="Semail" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Supervisor Phone Number* :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="Sphone" name="Sphone" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Co-Supervisor Name :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="Cname" name="Cname" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Co-Supervisor Email :</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="Cemail" name="Cemail" required>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <label for="roll" class="col-sm-3 col-form-label">Co-Supervisor Phone Number:</label>
+            <div class="col-sm-9">
+                <input type="text" ngModel class="input-group-text col-8" id="Cphone" name="Cphone" required>
+            </div>
+        </div>
+        <div class="form-group row mt-5">
+            <label for="DateOfSubmit" class="col-sm-3 col-form-label">Date of submission of thesis*:</label>
+            <div class="col-sm-9">
+                <input type="date" ngModel class="input-group-text col-8" id="data" name="DateOfSub" required>
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-8 mx-auto mt-5">
+            <button type="Submit" class="btn btn-primary col-3">Register</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,50 @@
+.buttons {
+    padding: 10% 0%;
+}
+
+button {
+    margin: 0 100px;
+    background-color: darkblue;
+    font-size: 18px;
+    font-weight: bold;
+    width: 380px;
+    padding: 10px;
+    margin-left: 4cm;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover,
+button:focus,
+button:active {
+    color: rgb(255, 255, 255);
+    background-color: darkblue;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.home {
+    margin: 0 0%;
+}
+
+.right {
+    height: 250px;
+    margin-left: 130px;
+}
+
+img {
+    margin-top: 0px;
+}
+
+app-footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}

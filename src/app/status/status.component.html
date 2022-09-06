@@ -1,0 +1,112 @@
+<app-header></app-header>
+<div>
+    <div class="topp">
+        <h2>Thesis Adjudication Status</h2>
+    </div>
+    <div style="margin-top: 25px;">
+        <div>
+            <ol class="progres" data-steps="1">
+                <!-- <li [class]="bar1[1]">
+                    <span class="name">Dispatched from R & D</span>
+                    <span class="name" style="margin-top: 2px;">On Date : {{ts['RD_dispatch']}}</span>
+                    <span class="step"><span>1</span></span>
+                </li> -->
+                <li [class]="bar1[2]">
+                    <span class="name">Arrived at DE office</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['DE_office']}}</span> -->
+                    <span class="step"><span>1</span></span>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h5 class="mx-5">Adjudication 1</h5>
+            <ol class="progres" data-steps="3">
+                <li [class]="bar2[1]">
+                    <span class="name">{{names[0]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E1_mail']}}</span> -->
+                    <span class="step"><span>1</span></span>
+                </li>
+                <!-- <li [class]="bar2[2]">
+                    <span class="name">{{bar2['name']}}</span>
+                    <span class="name" style="margin-top: 2px;">On Date : {{ts['E1_ARW'].slice(2)}}</span>
+                    <span class="step"><span>2</span></span>
+                </li> -->
+                <li [class]="bar2[2]">
+                    <span class="name">{{names[1]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E1_lift']}}</span> -->
+                    <span class="step"><span>2</span></span>
+                </li>
+                <!-- <li [class]="bar2[3]">
+                    <span class="name">{{names[2]}}</span>
+                    <span class="name" style="margin-top: 2px;">On Date : {{ts['E1_process']}}</span>
+                    <span class="step"><span>3</span></span>
+                </li> -->
+                <li [class]="bar2[3]">
+                    <span class="name">{{names[3]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E1_arrived']}}</span> -->
+                    <span class="step"><span>3</span></span>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h5 class="mx-5">Adjudication 2</h5>
+            <ol class="progres" data-steps="3">
+                <li [class]="bar3[1]">
+                    <span class="name">{{names[0]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E2_mail']}}</span> -->
+                    <span class="step"><span>1</span></span>
+                </li>
+                <!-- <li [class]="bar3[2]">
+                    <span class="name">{{bar3['name']}}</span>
+                    <span class="name" style="margin-top: 2px;">On Date : {{ts['E2_ARW'].slice(2)}}</span>
+                    <span class="step"><span>2</span></span>
+                </li> -->
+                <li [class]="bar3[2]">
+                    <span class="name">{{names[1]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E2_lift']}}</span> -->
+                    <span class="step"><span>2</span></span>
+                </li>
+                <!-- <li [class]="bar3[3]">
+                    <span class="name">{{names[2]}}</span>
+                    <span class="name" style="margin-top: 2px;">On Date : {{ts['E2_process']}}</span>
+                    <span class="step"><span>3</span></span>
+                </li> -->
+                <li [class]="bar3[3]">
+                    <span class="name">{{names[3]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E2_arrived']}}</span> -->
+                    <span class="step"><span>3</span></span>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h5 class="mx-5">Adjudication 3</h5>
+            <ol class="progres" data-steps="3">
+                <li [class]="bar4[1]">
+                    <span class="name">{{names[0]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E3_mail']}}</span> -->
+                    <span class="step"><span>1</span></span>
+                </li>
+                <!-- <li [class]="bar4[2]">
+                    <span class="name">{{bar4.name}}</span>
+                    <span class="name" style="margin-top: 2px;">On Date : {{ts['E3_ARW'].slice(2)}}</span>
+                    <span class="step"><span>2</span></span>
+                </li> -->
+                <li [class]="bar4[2]">
+                    <span class="name">{{names[1]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E3_lift']}}</span> -->
+                    <span class="step"><span>2</span></span>
+                </li>
+                <!-- <li [class]="bar4[3]">
+                    <span class="name">{{names[2]}}</span>
+                    <span class="name" style="margin-top: 2px;">On Date : {{ts['E3_process']}}</span>
+                    <span class="step"><span>3</span></span>
+                </li> -->
+                <li [class]="bar4[3]">
+                    <span class="name">{{names[3]}}</span>
+                    <!-- <span class="name" style="margin-top: 2px;">On Date : {{ts['E3_arrived']}}</span> -->
+                    <span class="step"><span>3</span></span>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<app-header></app-header>
+<div class="loginBox" *ngIf="!isValidUser && !showTable">
+    <form #SloginForm="ngForm" class="was-validated loginForm" (ngSubmit)="isUserExisted(SloginForm.value)">
+        <h3>Enter your email</h3>
+        <div class="inputBox">
+            <input type="email" ngModel class="input-group-text" id="Semail" name="Semail" placeholder="Enter email" required>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">Send OTP</button>
+        </div>
+    </form>
+</div>
+
+<div class="otpbox" *ngIf="isValidUser && !showTable">
+    <form #SotpForm="ngForm" class="was-validated loginForm" (ngSubmit)="validateOTP(SotpForm.value)">
+        <h3>OTP Validation</h3>
+        <div class="inputBox">
+            <input type="password" ngModel class="input-group-text" id="otp" name="otp" placeholder="Enter OTP" required>
+        </div>
+        <p>OTP is sent to your registered email</p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">Verify OTP</button>
+        </div>
+    </form>
+</div>
+
+<table class="table table-striped" *ngIf="showTable">
+    <thead>
+        <tr>
+            <th scope="col">S.No.</th>
+            <th scope="col">Roll number</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row" *ngFor="let item of rolls; let i = index;">
+            <td>{{i + 1}}</td>
+            <td>{{item['roll']}}</td>
+            <td><button type="submit" class="btn btn-outline-secondary" (click)="seeStatus(i)">See Status</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="flag" style="margin-left: 5%;">
+    <p>Roll: {{status.roll}}</p>
+    <!-- <p>Dispatched from R & D on Date : {{status['RD_dispatch'] || '---'}}</p> -->
+    <p>Arrived at DE office on Date : <span class="tick">{{status['DE_office'] ? '✔' : '---'}}</span></p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th *ngFor="let name of names;" scope="col">{{name}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Examiner - 1</td>
+                <td *ngFor="let item of E1;"><span class="tick">{{status[item] ? '✔' : '---'}}</span></td>
+            </tr>
+            <tr>
+                <td>Examiner - 2</td>
+                <td *ngFor="let item of E2;"><span class="tick">{{status[item] ? '✔' : '---'}}</span></td>
+            </tr>
+            <tr>
+                <td>Examiner - 3</td>
+                <td *ngFor="let item of E3;"><span class="tick">{{status[item] ? '✔' : '---'}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

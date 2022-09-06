@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="loginBox" *ngIf="!loggedIn && !_reset && !_fpass && !_validateOTP">
+    <form #loginForm="ngForm" class="was-validated loginForm" (ngSubmit)="adminLogin(loginForm.value)">
+        <h3>Login Here</h3>
+        <div class="inputBox">
+            <input type="text" ngModel class="input-group-text" id="admin" name="admin" placeholder="Admin ID" required>
+        </div>
+        <div class="inputBox">
+            <input type="password" ngModel class="input-group-text" id="pass" name="pass" placeholder="password" required>
+        </div>
+        <p class="link" (click)="ResetPassword()">Reset Password?</p>
+        <p class="link" (click)="ForgetPassword()">Forget Password?</p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class="loginBox" *ngIf="_reset">
+    <form #resetForm="ngForm" class="was-validated loginForm" (ngSubmit)="adminLogin(resetForm.value)">
+        <h3>Login Here</h3>
+        <div class="inputBox">
+            <input type="text" ngModel class="input-group-text" id="admin" name="admin" placeholder="Admin ID" required>
+        </div>
+        <div class="inputBox">
+            <input type="password" ngModel class="input-group-text" id="pass" name="pass" placeholder="current password" required>
+        </div>
+        <div class="inputBox">
+            <input type="password" ngModel class="input-group-text" id="npass" name="npass" placeholder="new password" required>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class="loginBox" *ngIf="_fpass">
+    <form #otpForm="ngForm" class="was-validated loginForm" (ngSubmit)="validateOTP(otpForm.value)">
+        <h3>Enter OTP</h3>
+        <div class="inputBox">
+            <input type="password" ngModel class="input-group-text" id="otp" name="otp" placeholder="Enter OTP" required>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">Verify</button>
+        </div>
+    </form>
+</div>
+
+<div class="loginBox" *ngIf="_validateOTP">
+    <form #passwordForm="ngForm" class="was-validated loginForm" (ngSubmit)="updatePassword(passwordForm.value)">
+        <h3>Enter your new Password</h3>
+        <div class="inputBox">
+            <input type="Password" ngModel class="input-group-text" id="pass" name="pass" placeholder="Password" required>
+        </div>
+        <div class="inputBox">
+            <input type="Password" ngModel class="input-group-text" id="cpass" name="cpass" placeholder="Confirm Password" required>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary" id="submit">Change Password</button>
+        </div>
+    </form>
+</div>

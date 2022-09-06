@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div>
+    <form #newUserForm="ngForm" (ngSubmit)="insert(newUserForm.value)">
+        <div class="container mt-5">
+            <div class="row p-3">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Roll no. </span>
+                        <input type="text" name="roll" id="roll" ngModel class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
+            <div class="row p-3">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                        <input type="text" name="email" id="email" ngModel class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
+            <div class="row px-5 py-3 col-6">
+                <button type="Submit" class="mx-2 btn btn-primary col-lg-4 col-md-10 col-sm-12" (click)="setFlag(0)">Insert</button>
+                <button type="Submit" class="mx-2 btn btn-primary col-lg-4 col-md-10 col-sm-12" (click)="setFlag(1)">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
