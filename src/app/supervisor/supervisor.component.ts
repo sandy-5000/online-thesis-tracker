@@ -36,8 +36,8 @@ export class SupervisorComponent implements OnInit {
 		let digits: string = '0123456789',
 			otp: string = '';
 		for (let i = 0; i < 6; i++) {
-			// otp += digits[Math.floor(Math.random() * 10)];
-			otp += 0;
+			otp += digits[Math.floor(Math.random() * 10)];
+			// otp += 0;
 		}
 		//console.log(otp);
 		this.OTP = otp;

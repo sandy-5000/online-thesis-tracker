@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ConnectDBService } from '../services/connectDB/connect-db.service';
 import { SendMailService } from '../services/sendMail/send-mail.service';
 import Swal from 'sweetalert2';
+import { ShareDataService } from '../services/shareData/share-data.service';
 
 @Component({
 	selector: 'app-aadhar-auth',
@@ -13,9 +14,11 @@ export class AadharAuthComponent implements OnInit {
 	constructor(
 		private router: Router,
 		private mail: SendMailService,
-		private db: ConnectDBService
+		private db: ConnectDBService,
+		private shareData: ShareDataService
 	) {}
 	private OTP: string = '';
+	message: string = this.shareData.message;
 
 	hash(x: string) {
 		let cd = '', salt = '*&$*)@^!%^&%';
