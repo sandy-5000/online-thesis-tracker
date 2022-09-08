@@ -69,7 +69,8 @@ export class UpdateDataComponent implements OnInit {
 		let digits: string = '0123456789',
 			otp = '';
 		for (let i = 0; i < 6; i++) {
-			otp += digits[Math.floor(Math.random() * 10)];
+			// otp += digits[Math.floor(Math.random() * 10)];
+			otp += 0;
 		}
 		this.OTP = otp;
 		let body: string = `The OTP for Phd Thesis Tracking System is ${otp} please do not share this with anyone. This is for your information, please do not respond to this mail. It will not be monitored.`;

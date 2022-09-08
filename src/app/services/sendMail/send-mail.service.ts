@@ -16,8 +16,10 @@ export class SendMailService {
 	}
 
 	// http://localhost:80/__final/phpmailer/index.php
+	// https://phdtracking.jntukexams.net/server/phpmailer/index.php
 	sendMail(email: string, body: string) {
-		this.send('http://localhost:80/__final/phpmailer/index.php', email, body).subscribe(
+		// this.send('https://phdtracking.jntukexams.net/server/phpmailer/index.php', email, body).subscribe(
+		this.send('https://phdtracking.jntukexams.net/server/phpmailer/index.php', email, body).subscribe(
 			data => {
 				let res: any = data;
 				console.log(res);
