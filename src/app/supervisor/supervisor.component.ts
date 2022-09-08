@@ -46,7 +46,15 @@ export class SupervisorComponent implements OnInit {
 		this.mail.sendMail(email, body);
 	}
 	validateOTP(data: any) {
-		if (data.otp === this.OTP) {
+		// if (data.otp === this.OTP) {
+		let flag = false;
+		for (const inst of this.rolls) {
+			if (inst.roll.trim() === data.otp.trim()) {
+				flag = true;
+				break;
+			}
+		}
+		if (flag) {
 			this.showTable = true;
 		} else {
 			Swal.fire('OTP verification failed', 'Please enter your OTP Properly', 'error');
