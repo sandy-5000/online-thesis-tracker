@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ConnectDBService } from '../services/connectDB/connect-db.service';
 import { SendMailService } from '../services/sendMail/send-mail.service';
-import { ShareDataService } from '../services/shareData/share-data.service';
 
 @Component({
 	selector: 'app-forgot-password',
@@ -15,9 +14,9 @@ export class ForgotPasswordComponent implements OnInit {
 		private router: Router,
 		private db: ConnectDBService,
 		private mail: SendMailService
-	) {}
+	) { }
 
-	ngOnInit(): void {}
+	ngOnInit(): void { }
 
 	roll: string = '';
 	email: string = '';
@@ -93,7 +92,6 @@ export class ForgotPasswordComponent implements OnInit {
 			otp = '';
 		for (let i = 0; i < 6; i++) {
 			otp += digits[Math.floor(Math.random() * 10)];
-			// otp += 0;
 		}
 		this.OTP = otp;
 		let body: string = `The OTP for Phd Thesis Tracking System is ${otp} please do not share this with anyone. This is for your information, please do not respond to this mail. It will not be monitored.`;

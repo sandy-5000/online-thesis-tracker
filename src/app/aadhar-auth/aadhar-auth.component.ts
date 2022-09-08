@@ -16,14 +16,16 @@ export class AadharAuthComponent implements OnInit {
 		private mail: SendMailService,
 		private db: ConnectDBService,
 		private shareData: ShareDataService
-	) {}
+	) { }
 	private OTP: string = '';
 	message: string = this.shareData.message;
 
-	hash(x: string) {
+	hash(x: string, flag: boolean = false) {
 		let cd = '', salt = '*&$*)@^!%^&%';
+		if (flag)
+			salt = '$/.@^!`~&(x%^$(^)+/+-=><*`~&(x%'
 		for (let i = 0; i < x.length; i++) {
-			cd += x.charCodeAt(i) * 2.5 + salt[i];
+			cd += (x.charCodeAt(i) * 2.5) + salt[i % salt.length];
 		}
 		return cd;
 	}
@@ -51,20 +53,20 @@ export class AadharAuthComponent implements OnInit {
 		let digits: string = '0123456789',
 			otp = '';
 		for (let i = 0; i < 6; i++) {
-			// otp += digits[Math.floor(Math.random() * 10)];
-			otp += 0;
+			otp += digits[Math.floor(Math.random() * 10)];
 		}
-		//console.log(otp);
 		this.OTP = otp;
+		this.OTP = sessionStorage.getItem('token') || '';
 		let body: string = `The OTP for Phd Thesis Tracking System is ${otp} please do not share this with anyone. This is for your information, please do not respond to this mail. It will not be monitored.`;
 		this.mail.sendMail(sessionStorage.getItem('email') || '', body);
 	}
 	validateOTP(data: any) {
+		data.otp = this.hash(data.otp, true);
 		if (this.OTP == data.otp) {
 			let query = `select * from status where roll = '${sessionStorage.getItem('roll')}'`;
 			this.db.processQuery(query).subscribe((Data) => {
 				if (Data.length != 0 && Data.length != undefined) {
-        			sessionStorage.setItem('status', JSON.stringify(Data[0]));
+					sessionStorage.setItem('status', JSON.stringify(Data[0]));
 					this.router.navigateByUrl('/status');
 				} else {
 					Swal.fire(
