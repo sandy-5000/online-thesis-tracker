@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
 				Swal.fire(`registration number or password didn't match`, 'please check your credentials', 'error');
 				this.buttonValue = 'Submit';
 			}
-			console.log(Data);
+			// console.log(Data);
 		});
 	}
 
